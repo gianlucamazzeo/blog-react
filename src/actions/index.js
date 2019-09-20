@@ -26,10 +26,21 @@ import jsonPlaceholder from '../apis/jsonPlaceholder';
   // generates an error because  the response data is not available until http 200 code
   // see png file (bad-request-using-action-call-to-reducers-without-promisie.png) for better understanding
  
+  //export const fetchPosts = () => {
+  //const promise = jsonPlaceholder.get('/posts');
+  //  return {
+  //      type: 'FETCH_POSTS',
+  //      payload: promise
+  //  };
+//};
+
   export const fetchPosts = () => {
-  const promise = jsonPlaceholder.get('/posts');
-    return {
-        type: 'FETCH_POSTS',
-        payload: promise
-    };
-};
+   return function(dispatch,getState) {
+    const promise = jsonPlaceholder.get('/posts');
+    
+        return {
+            type: 'FETCH_POSTS',
+            payload: promise
+        };
+  }
+ };
