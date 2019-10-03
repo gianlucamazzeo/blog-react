@@ -1,3 +1,10 @@
+
+![alt text](https://github.com/gianlucamazzeo/blog-react/blob/master/mockup.png)
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
